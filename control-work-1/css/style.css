@@ -1,0 +1,23 @@
+.page-w-1440{
+    width: 1440px;
+    margin: 0 auto;
+    background-color: rgb(88, 137, 183);
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+}
+main{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.section-form-test{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:30px;
+    background-color:white;
+    border-radius:5px;
+}
