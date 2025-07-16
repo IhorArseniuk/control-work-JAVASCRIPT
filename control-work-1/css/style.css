@@ -1,5 +1,4 @@
 .page-w-1440{
-    width: 1440px;
     margin: 0 auto;
     background-color: rgb(88, 137, 183);
     height: 100%;
@@ -9,15 +8,69 @@
     align-items:center;
 }
 main{
+    width: 100%;
     display:flex;
     justify-content:center;
     align-items:center;
+    height: 90vh;
 }
 .section-form-test{
+    width: 750px;
+    height: 570px;
     display:flex;
     flex-direction:column;
-    align-items:flex-start;
+    align-items:center;
+    justify-content:center;
     gap:30px;
     background-color:white;
     border-radius:5px;
+}
+.div-h2-form{
+    display:flex;
+    flex-direction:column;
+    gap:40px;
+}
+.div-nameValue{
+    display: flex;
+    gap:50px;
+    margin-bottom:30px;
+}
+.div-nameValue button{
+    height: 25px;
+    align-self: end;
+}
+.div-add-namVal{
+    display:flex;
+    flex-direction:column;
+}
+.div-add-namVal input{
+    width:500px;
+    height: 25px;
+}
+.form-list{
+    display: flex;
+    flex-direction:column;
+}
+.container{
+    display:flex;
+    gap:50px;
+}
+#list{
+    width:500px;
+    height:300px;
+    border:1px solid grey;
+}
+.buttons-container{
+    display:flex;
+    flex-direction:column;
+}
+.buttons-container button{
+    height: 25px;
+}
+.buttons-container button:nth-child(2){
+    margin-top:15px;
+    margin-bottom:25px;
+}
+.buttons-container button:nth-child(3){
+    width: 60px;
 }

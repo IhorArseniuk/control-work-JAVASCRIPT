@@ -1,0 +1,45 @@
+@media screen and (max-width:768px){
+    .page-w-1440{
+        width: 100%;
+    }
+    main{
+        width: 100%;
+        display:flex;
+        justify-content:center;
+    }
+    .section-form-test{
+        width: 350px;
+        height: 600px;
+        gap:20px;
+        display:flex;
+        justify-content:center;
+    }
+    .div-h2-form{
+        gap:30px;
+    }
+    .div-nameValue{
+      flex-direction: column;
+        gap:10px;
+        margin-bottom:20px;
+    }
+    .div-add-namVal input{
+        width:250px;
+    }
+    .div-nameValue button{
+        align-self: start;
+    }
+    .container{
+        display:flex;
+        flex-direction: column;
+        gap:30px;
+    }
+    #list{
+        width:250px;
+        height:200px;
+    }
+    .buttons-container{
+        display:flex;
+        align-items:center;
+        flex-direction:column;
+    }
+}

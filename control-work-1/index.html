@@ -7,33 +7,39 @@
     <title>Control work 1</title>
     <link rel="stylesheet" href="css/rest.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-mobile.css">
 </head>
 <body>
 <div class="page-w-1440">
 <header></header>
 <main>
     <section class="section-form-test">
-        <h2>Test</h2>
-        <form name="test-form">
-            <div class="add-nameValue">
+     <div class="div-h2-form"><h2>Test</h2>
+        <form name="testForm">
+            <div class="div-nameValue">
+                <div class="div-add-namVal">
                 <label for="nameValue">Name/Value Pair</label>
                 <input type="text" id="nameValue" name="nameValue" placeholder="Name=Value">
+                </div>
                 <button class="form-buttons">Add</button>
             </div>
             <div class="form-list">
-                <div class="list-container">
-                    <ul></ul>
-                </div>
+                    <p>Name/Value Pair List</p>
+                <div class="container">
+                    <ul id="list"></ul>
                 <div class="buttons-container">
                     <button class="form-buttons">Sort by Name</button>
                     <button class="form-buttons">Sort by Value</button>
                     <button class="form-buttons">Delete</button>
                 </div>
+                </div>
             </div>
         </form>
+     </div>
     </section>
 </main>
 <footer></footer>
 </div>
+<script src="main.js"></script>
 </body>
 </html>  
