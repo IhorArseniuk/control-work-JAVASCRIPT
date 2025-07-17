@@ -24,7 +24,7 @@ addButton.addEventListener('click',()=>{
 if(inputValue.includes('=') && inputValue.match(/^[a-zA-Z0-9]+\s*=\s*[a-zA-Z0-9]+$/)){
 
     let inputValSplit=inputValue.split('=');
-    let pairObj={name:inputValSplit[0],value:inputValSplit[1]}
+    let pairObj={name:inputValSplit[0].trim(),value:inputValSplit[1].trim()}
     pairs.push(pairObj);
 
      let li=document.createElement('li');
@@ -54,7 +54,6 @@ function sortPairsByOption(option){
             liPair.innerText=pair.name+'='+pair.value;
             nameValueList.appendChild(liPair);
         })
-    console.log(pairs);
 }
 
 
