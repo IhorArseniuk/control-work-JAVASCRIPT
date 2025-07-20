@@ -71,11 +71,9 @@ nameValueList.addEventListener('click',(ev)=>{
         let targetSplit=ev.target.textContent.split('=');
         for(let pair of pairs){
             if(pair.name===targetSplit[0]&&pair.value===targetSplit[1]){
-                pair.status='delete'
-            }
-        }
-    }
-})
+               if(ev.target.classList.contains('select')) pair.status='delete';
+               else {pair.status='wait'}
+            }}}})
 
 deleteBtn.addEventListener('click',()=>{
     let liPairs=document.querySelectorAll('.select');
