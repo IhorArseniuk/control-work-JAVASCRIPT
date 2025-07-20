@@ -76,7 +76,7 @@ nameValueList.addEventListener('click',(ev)=>{
             }}}})
 
 deleteBtn.addEventListener('click',()=>{
-    let liPairs=document.querySelectorAll('.select');
+    let liPairs=document.querySelectorAll('li.select');
     liPairs.forEach(li=>li.remove())
     pairs.forEach((pair,index)=>{if(pair.status==='delete')pairs.splice(index,1)})
 })
