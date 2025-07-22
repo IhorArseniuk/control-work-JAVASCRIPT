@@ -1,0 +1,42 @@
+.wrapper{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+}
+main{
+    width: 100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height: 90vh;
+}
+.user-info-div{
+    padding:10px;
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    justify-content:center;
+    align-items:center;
+    border:5px solid indigo;
+    background-color: azure;
+}
+.address-div{
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+}
+.AddressGeo-div{
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+}
+.user-company-div{
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+}
+.user-info-div button{
+    width: 100px;
+}
