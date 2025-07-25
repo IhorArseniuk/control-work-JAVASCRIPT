@@ -99,12 +99,8 @@ postBtn.addEventListener('click',(ev)=>{
     let hidePostsBtn=document.createElement('button');
             hidePostsBtn.innerText='Hide Posts';
             buttonsDiv.appendChild(hidePostsBtn);
-
-            hidePostsBtn.addEventListener('click',()=>{
-                postsH2.remove() ;
-                currentUserPostsDiv.remove();
-            })
-
-
-        postBtn.disabled=currentUserPostsDiv.hasChildNodes(true);
 })
+
+let userSectionChilds=Array.from(userSection.children);
+
+
