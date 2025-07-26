@@ -51,9 +51,6 @@ main{
     align-items: center;
     gap:10px;
 }
-.user-info-div button{
-    width: 100px;
-}
 .user-posts-div{
     display:grid;
     grid-template-columns: repeat(5, 1fr);
@@ -72,4 +69,12 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.buttons-div{
+    display: flex;
+    gap:20px;
+}
+.buttons-div button{
+    width: 90%;
+ height: 50px;
 }

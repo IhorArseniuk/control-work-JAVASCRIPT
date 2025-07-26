@@ -1,4 +1,5 @@
 .wrapper{
+    height: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -10,7 +11,7 @@ main{
     display:flex;
     justify-content:center;
     align-items:center;
-    height: 90vh;
+    height: 90%;
 }
 .div-users{
     display:grid;
@@ -19,7 +20,7 @@ main{
     gap:50px;
 }
 .user-div{
-    width: 200px;
+    width: 250px;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -27,4 +28,9 @@ main{
     gap:10px;
     border:2px solid darkslategray;
     background-color: cadetblue;
+    padding:10px;
+}
+.user-div button{
+    width: 50%;
+    height: 25px;
 }

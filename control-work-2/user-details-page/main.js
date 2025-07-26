@@ -70,6 +70,8 @@ userSection.appendChild(userDiv);
 
 postBtn.addEventListener('click',(ev)=>{
 
+    if(userSection.querySelector( '.user-posts-div'))return;
+
     let currentUserPostsDiv=document.createElement('div');
     currentUserPostsDiv.className='user-posts-div';
     let postsH2=document.createElement('h2');
@@ -79,6 +81,8 @@ postBtn.addEventListener('click',(ev)=>{
     fetch('https://jsonplaceholder.typicode.com/posts')
         .then(res=>res.json())
         .then(posts=>{
+
+
             for(let post of posts){
                 if(user.id===post.userId){
                     let postDiv=document.createElement('div');
@@ -86,8 +90,13 @@ postBtn.addEventListener('click',(ev)=>{
 
                     let postTitleH3=document.createElement('h3');
                     postTitleH3.innerText=`Title:${post.title}`;
+
                     let postDetailsBtn=document.createElement('button');
                     postDetailsBtn.innerHTML=`<a href="../post-details-page/post-details.html">Post Details</a>`;
+                  postDetailsBtn.addEventListener('click',()=>{
+                      localStorage.setItem('postDetails',JSON.stringify(post));
+                  })
+
                     postDiv.append(postTitleH3,postDetailsBtn);
                     currentUserPostsDiv.appendChild(postDiv);
                 }
@@ -95,12 +104,16 @@ postBtn.addEventListener('click',(ev)=>{
             userSection.appendChild(currentUserPostsDiv);
 
         })
-
     let hidePostsBtn=document.createElement('button');
             hidePostsBtn.innerText='Hide Posts';
             buttonsDiv.appendChild(hidePostsBtn);
+
+            hidePostsBtn.addEventListener('click',(ev)=>{
+                currentUserPostsDiv.remove();
+                postsH2.remove();
+                hidePostsBtn.remove();
+                postBtn.disabled = false;
+            })
+    postBtn.disabled = true;
 })
-
-let userSectionChilds=Array.from(userSection.children);
-
 
