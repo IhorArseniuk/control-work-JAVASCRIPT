@@ -78,10 +78,11 @@ postBtn.addEventListener('click',(ev)=>{
     postsH2.innerText=' User posts:'
     userSection.appendChild(postsH2);
 
-    fetch(`https://jsonplaceholder.typicode.com/${user.id}/posts`)
+    fetch(`https://jsonplaceholder.typicode.com/users/${user.id}/posts`)
         .then(res=>res.json())
         .then(posts=>{
             for(let post of posts){
+                if(user.id===post.userId){
                     let postDiv=document.createElement('div');
                     postDiv.className='user-post-div';
 
@@ -97,6 +98,7 @@ postBtn.addEventListener('click',(ev)=>{
                     postDiv.append(postTitleH3,postDetailsBtn);
                     currentUserPostsDiv.appendChild(postDiv);
                 }
+            }
             userSection.appendChild(currentUserPostsDiv);
 
         })

@@ -34,14 +34,11 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${post.id}/comments`)
         for(let comment of comments){
                 let commentDiv=document.createElement('div');
 
-                let postId=document.createElement('h2');
-                postId.innerText=`Post Id:${post.id}`;
-
                 let commentId=document.createElement('h2');
                 commentId.innerText=`Comment Id:${comment.id}`;
 
                 let commentName=document.createElement('p');
-                 commentName.innerText=`Comment Name:${comment.name}`;
+                 commentName.innerText=`Comment name:${comment.name}`;
 
                  let commentEmail=document.createElement('p');
                  commentEmail.innerText=`Email:${comment.email}`;
@@ -49,7 +46,7 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${post.id}/comments`)
                  let commentBody=document.createElement('p');
                   commentBody.innerText=`Comment:${comment.body}`;
 
-                  commentDiv.append(postId,commentId,commentName,commentEmail,commentBody);
+                  commentDiv.append(commentId,commentName,commentEmail,commentBody);
 
                   commentsDiv.appendChild(commentDiv);
 
