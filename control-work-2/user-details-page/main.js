@@ -31,7 +31,7 @@ for( let item in address ){
     else{
         let geoDiv=document.createElement('div');
         geoDiv.innerText='Geolocation:';
-        geoDiv.className='AddressGeo-div';
+        geoDiv.className='address-geo-div';
        let objectAddress=address[item];
         for( let i in objectAddress){
             let iP=document.createElement('p');
@@ -47,7 +47,7 @@ userPhoneH3.innerText=`Phone:${user.phone}`;
 
 let userWebSiteA=document.createElement('a');
 userWebSiteA.href=`${user.website}`;
-userWebSiteA.innerText=`User Website:${user.website}`;
+userWebSiteA.innerText=`User website:${user.website}`;
 
 let userCompany=user.company;
 let userCompanyDiv=document.createElement('div');
@@ -62,7 +62,7 @@ let buttonsDiv=document.createElement('div');
 buttonsDiv.className='buttons-div';
 
 let postBtn=document.createElement('button');
-postBtn.innerText='post of current user'
+postBtn.innerText='Post of current user'
 buttonsDiv.appendChild(postBtn);
 
 userDiv.append(userIdH2,userNameP,userUsrNamP,userEmailP, addressDiv,userPhoneH3,userWebSiteA,userCompanyDiv,buttonsDiv);
@@ -78,13 +78,10 @@ postBtn.addEventListener('click',(ev)=>{
     postsH2.innerText=' User posts:'
     userSection.appendChild(postsH2);
 
-    fetch('https://jsonplaceholder.typicode.com/posts')
+    fetch(`https://jsonplaceholder.typicode.com/${user.id}/posts`)
         .then(res=>res.json())
         .then(posts=>{
-
-
             for(let post of posts){
-                if(user.id===post.userId){
                     let postDiv=document.createElement('div');
                     postDiv.className='user-post-div';
 
@@ -92,7 +89,7 @@ postBtn.addEventListener('click',(ev)=>{
                     postTitleH3.innerText=`Title:${post.title}`;
 
                     let postDetailsBtn=document.createElement('button');
-                    postDetailsBtn.innerHTML=`<a href="../post-details-page/post-details.html">Post Details</a>`;
+                    postDetailsBtn.innerHTML=`<a href="../post-details-page/post-details.html">Post details</a>`;
                   postDetailsBtn.addEventListener('click',()=>{
                       localStorage.setItem('postDetails',JSON.stringify(post));
                   })
@@ -100,12 +97,11 @@ postBtn.addEventListener('click',(ev)=>{
                     postDiv.append(postTitleH3,postDetailsBtn);
                     currentUserPostsDiv.appendChild(postDiv);
                 }
-            }
             userSection.appendChild(currentUserPostsDiv);
 
         })
     let hidePostsBtn=document.createElement('button');
-            hidePostsBtn.innerText='Hide Posts';
+            hidePostsBtn.innerText='Hide posts';
             buttonsDiv.appendChild(hidePostsBtn);
 
             hidePostsBtn.addEventListener('click',(ev)=>{

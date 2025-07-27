@@ -40,7 +40,7 @@ main{
     flex-direction: column;
     gap:10px;
 }
-.AddressGeo-div{
+.address-geo-div{
     display:flex;
     flex-direction: column;
     gap:10px;

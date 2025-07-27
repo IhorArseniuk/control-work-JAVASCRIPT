@@ -32,7 +32,6 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${post.id}/comments`)
     .then(response=>response.json())
     .then(comments=>{
         for(let comment of comments){
-            console.log(comments);
                 let commentDiv=document.createElement('div');
 
                 let postId=document.createElement('h2');
